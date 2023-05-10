@@ -1,0 +1,12 @@
+{
+  "resources/js/app.js": {
+    "file": "D:/WebDev/xampp/htdocs/blog/assets/app-264c702e.js",
+    "isEntry": true,
+    "src": "D:/WebDev/xampp/htdocs/blog/resources/js/app.js"
+  },
+  "resources/sass/app.scss": {
+    "file": "D:/WebDev/xampp/htdocs/blog/assets/app-ed98896d.css",
+    "isEntry": true,
+    "src": "D:/WebDev/xampp/htdocs/blog/resources/sass/app.scss"
+  }
+}
