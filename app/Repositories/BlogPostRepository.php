@@ -26,6 +26,7 @@ class BlogPostRepository extends CoreRepository
 
         $result = $this->startConditions()
             ->select($columns)
+            ->with(['parentCategory:id,title',])
             ->orderBy('id','DESC')
             ->with([
                 'category' => function ($query) {
