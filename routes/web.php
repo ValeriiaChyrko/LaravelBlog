@@ -19,11 +19,30 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Error: Target class [DiggingDeeperController] does not exist.
+//$route = Route::getRoutes()->getByName('digging_deeper.prepareCatalog');
+//$routePath = $route->uri();
+//dd($routePath);
+//URL null
+
 Route::group(['prefix' => 'digging_deeper'], function () {
 
     Route::get('collections', [DiggingDeeperController::class, 'collections'])
 
         ->name('digging_deeper.collections');
+
+    /*Route::get('process-video', 'DiggingDeeperController@processVideo')
+        ->name('digging_deeper.processVideo');
+
+    Route::get('prepare-catalog', 'DiggingDeeperController@prepareCatalog')
+        ->name('digging_deeper.prepareCatalog');*/
+
+    Route::get('process-video', [DiggingDeeperController::class, 'processVideo'])
+        ->name('digging_deeper.processVideo');
+
+    Route::get('prepare-catalog', [DiggingDeeperController::class, 'prepareCatalog'])
+        ->name('digging_deeper.prepareCatalog');
+
 
 });
 
